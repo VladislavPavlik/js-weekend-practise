@@ -39,12 +39,42 @@
 //введёт число больше 100, либо не нажмет кнопку
 //Отмена в prompt
 
-let inputNumber = Number(prompt('Введите число больше 100'));
+// let inputNumber = Number(prompt('Введите число больше 100'));
 
-while (inputNumber < 100) {
-    inputNumber = Number(prompt('Введите число больше 100'));
+// while (inputNumber < 100) {
+//     inputNumber = Number(prompt('Введите число больше 100'));
    
 
-    console.log(inputNumber ,"inputNumber")
-}
+//     console.log(inputNumber ,"inputNumber")
+// }
 
+// За каждый месяц налоговая начисляет на зп разработчика 5% от суммы.
+// Напишите функцию, в которую пользователь вводит сумму зп
+//  и количество месяцев с помощью prompt() не забываем что промпт возвращает строку.
+// А налоговая вычисляет конечную сумму зп без налогов за количество месяцев,
+// сумму налогов всего и чистый доход разработчика за каждый месяц.
+// Для вычисления суммы с учетом процентов используйте цикл for.
+
+
+function calcSalaryDev() {
+    const salary = Number(prompt("Какой уровень ЗП Вы ожидаете?"));
+    const months = Number(prompt("Количество месяцев"));
+    let taxFreeTotalSalary = 0;
+    let totalTaxSum = 0;
+    let taxFreeMonthSalary = 0;
+
+    // for (let i = 1; i <= months; i += 1){
+    //     totalSalary += salary;
+    //     console.log(totalSalary);
+
+    //     taxFreeMonthSalary = salary * 0.95;
+    //     console.log(`${i} tax Free Month Salary: ${taxFreeMonthSalary}`);
+    // }
+
+
+    taxFreeTotalSalary = (salary * months) - ((salary * months) - ((salary * 0.95) * months));
+    totalTaxSum = (salary * months) * 0.05;
+    console.log(`tax Free Total Salary: ${taxFreeTotalSalary}, total Tax Sum: ${totalTaxSum}`);
+
+}
+calcSalaryDev();
