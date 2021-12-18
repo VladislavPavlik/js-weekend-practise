@@ -56,25 +56,64 @@
 // Для вычисления суммы с учетом процентов используйте цикл for.
 
 
-function calcSalaryDev() {
-    const salary = Number(prompt("Какой уровень ЗП Вы ожидаете?"));
-    const months = Number(prompt("Количество месяцев"));
-    let taxFreeTotalSalary = 0;
-    let totalTaxSum = 0;
-    let taxFreeMonthSalary = 0;
+// function calcSalaryDev() {
+//     const salary = Number(prompt("Какой уровень ЗП Вы ожидаете?"));
+//     const months = Number(prompt("Количество месяцев"));
+//     let taxFreeTotalSalary = 0;
+//     let totalTaxSum = 0;
+//     let taxFreeMonthSalary = 0;
 
-    // for (let i = 1; i <= months; i += 1){
-    //     totalSalary += salary;
-    //     console.log(totalSalary);
+//     // for (let i = 1; i <= months; i += 1){
+//     //     totalSalary += salary;
+//     //     console.log(totalSalary);
 
-    //     taxFreeMonthSalary = salary * 0.95;
-    //     console.log(`${i} tax Free Month Salary: ${taxFreeMonthSalary}`);
-    // }
+//     //     taxFreeMonthSalary = salary * 0.95;
+//     //     console.log(`${i} tax Free Month Salary: ${taxFreeMonthSalary}`);
+//     // }
 
 
-    taxFreeTotalSalary = (salary * months) - ((salary * months) - ((salary * 0.95) * months));
-    totalTaxSum = (salary * months) * 0.05;
-    console.log(`tax Free Total Salary: ${taxFreeTotalSalary}, total Tax Sum: ${totalTaxSum}`);
+//     taxFreeTotalSalary = (salary * months) - ((salary * months) - ((salary * 0.95) * months));
+//     totalTaxSum = (salary * months) * 0.05;
+//     console.log(`tax Free Total Salary: ${taxFreeTotalSalary}, total Tax Sum: ${totalTaxSum}`);
 
-}
-calcSalaryDev();
+// }
+// calcSalaryDev();
+
+// 3 Напишите фукцио преобраения данных
+
+// const inputData = [
+//     { id: 1, name: "Item 1" },
+//     { id: 2, name: "Item 2" },
+//     { id: 4, name: "Item 4" },
+//     { id: 7, name: "Item 7" },
+// ];
+
+// ('function should return normalized data', () => {
+//     expect(normalize(inputData)).toEqual({
+//         entities: {
+//             1: { id: 1, name: "Item 1" },
+//             2: { id: 2, name: "Item 2" },
+//             4: { id: 4, name: "Item 4" },
+//             7: { id: 7, name: "Item 7" },
+//         },
+//         byId: [1, 2, 4, 7],
+//     });
+
+// function normalizeData(data) {
+//     const objData = {};
+//     const arrayId = [];
+//     const resultDataNormalize = {};
+//     data.forEach(element => {
+//         let elId = element.id;
+//         // console.log(elId)
+//         objData[elId] = element;
+//         // console.log(objData);
+//         arrayId.push(elId);
+//         // console.log(arrayId);
+//     });
+//     resultDataNormalize.entities = objData;
+//     resultDataNormalize.byId = arrayId;
+//     console.log(resultDataNormalize)
+//  return resultDataNormalize;
+// }
+// normalizeData(inputData)
