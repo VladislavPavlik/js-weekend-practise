@@ -117,3 +117,21 @@
 //  return resultDataNormalize;
 // }
 // normalizeData(inputData)
+
+const arr = ['BEST', 'the', 'foo', 'is', 'JS'];
+
+function str(array, numberToDelete) {
+    // const reversedArr = array.reverse();
+    // console.log(reversedArr);
+    // const deletedEl = reversedArr.splice(numberToDelete-1, 1);
+    // console.log(deletedEl);
+    // console.log(reversedArr);
+    // console.log(reversedArr.join(' '));
+    // return reversedArr.join(' ');
+    
+    const newStr = array.reverse().slice(0, numberToDelete - 1).concat(array.slice(numberToDelete)).join(' ');
+    console.log(newStr);
+    return newStr;
+
+}
+str(arr, 3);
