@@ -225,6 +225,7 @@
 // };
 // Change code above this line
 
+
 // Создать функцию generatePetCard,
 // которая принимает 3 аргумента: kind, year, name
 // Функция должна возвращать разметку HTML:
