@@ -289,3 +289,6 @@ function onClickBtn(event) {
 btnCard.forEach((button) => {
   button.addEventListener('click', onClickBtn);
 })
+
+
+
