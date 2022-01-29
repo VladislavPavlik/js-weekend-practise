@@ -144,83 +144,148 @@
 // Вызов функции с указанным массивом пользователей возвращает массив ["Sharron Pace", "Briana Decker", "Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner", "Goldie Gentry", "Aisha Tran", "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman"]
 // Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
 
-const users = [
-  {
-    name: "Moore Hensley",
-    email: "moorehensley@indexia.com",
-    eyeColor: "blue",
-    friends: ["Sharron Pace"],
-    isActive: false,
-    balance: 2811,
-    gender: "male",
-    age: 37
-  },
-  {
-    name: "Sharlene Bush",
-    email: "sharlenebush@tubesys.com",
-    eyeColor: "blue",
-    friends: ["Briana Decker", "Sharron Pace"],
-    isActive: true,
-    balance: 3821,
-    gender: "female",
-    age: 34
-  },
-  {
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-    isActive: false,
-    balance: 3793,
-    gender: "male",
-    age: 24
-  },
-  {
-    name: "Elma Head",
-    email: "elmahead@omatom.com",
-    eyeColor: "green",
-    friends: ["Goldie Gentry", "Aisha Tran"],
-    isActive: true,
-    balance: 2278,
-    gender: "female",
-    age: 21
-  },
-  {
-    name: "Carey Barr",
-    email: "careybarr@nurali.com",
-    eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong"],
-    isActive: true,
-    balance: 3951,
-    gender: "male",
-    age: 27
-  },
-  {
-    name: "Blackburn Dotson",
-    email: "blackburndotson@furnigeer.com",
-    eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman"],
-    isActive: false,
-    balance: 1498,
-    gender: "male",
-    age: 38
-  },
-  {
-    name: "Sheree Anthony",
-    email: "shereeanthony@kog.com",
-    eyeColor: "brown",
-    friends: ["Goldie Gentry", "Briana Decker"],
-    isActive: true,
-    balance: 2764,
-    gender: "female",
-    age: 39
-  }
-]
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//     age: 37
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//     age: 34
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//     age: 24
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//     age: 21
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//     age: 27
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//     age: 38
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//     age: 39
+//   }
+// ]
 
-// Change code below this line
-const getFriends = (users) => {
-    const arrFriends = users.flatMap(user => user.friends).filter((element, index, array) => array.indexOf(element) === index);
-    const arrFriends = new Set(users.flatMap(user => user.friends));
-    return Array.from(new Set(users.flatMap(user => user.friends)));
-};
+// // Change code below this line
+// const getFriends = (users) => {
+//     const arrFriends = users.flatMap(user => user.friends).filter((element, index, array) => array.indexOf(element) === index);
+//     const arrFriends = new Set(users.flatMap(user => user.friends));
+//     return Array.from(new Set(users.flatMap(user => user.friends)));
+// };
 // Change code above this line
+
+// Создать функцию generatePetCard,
+// которая принимает 3 аргумента: kind, year, name
+// Функция должна возвращать разметку HTML:
+// <li class="petCard">
+//   <h2>Name Year</h2>
+//   <p>Животное  Kind - Year год рождения. Возраст животного - Years лет.</p>
+// </li>
+// высчитать возраст животного и если старше 4 лет добавляем "лет" иначе добавлеем "года"
+// Создать новый нумерованный список с классом pets
+// Создать 4 карточки для животных, используя функцию generatePetCard
+// Поместить эти 4 карточки внутрь списка с классом pets
+
+// Поместить список c классом pets на страницу DOM -  в DIV с классом container
+
+// Добавить кнопку Удалить на каждую карточку животного
+
+// При клике на кнопку - удалять карточку из структуры DOM
+// 1. Выбрать все кнопки
+
+// 2. Создать функцию удаления
+
+// 3. Использовать цикл - чтобы повесить обработчик события на каждую кнопку
+
+const petsList = [
+    { kind: "Dog", year: 2015, name: "lassie" },
+    { kind: "Cat", year: 2016, name: "einstein" },
+    { kind: "Hedgehog", year: 2019, name: "elizabeth" },
+    { kind: "Hamster", year: 2020, name: "alcatraz" },
+];
+
+const divContainer = document.querySelector('.container');
+
+function generatePetCard(kind, year, name) { 
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  return `<li class="petCard">
+          <h2>${name.toUpperCase()} ${year}</h2>
+          <p>Животное  ${kind.toUpperCase()} - ${year} год рождения. Возраст животного - ${currentYear - year} ${currentYear - year > 4 ? 'лет' : 'года'}.</p>
+          <button type="button" class="btn">Удалить</button>
+        </li>`
+}
+
+const petsCardList = document.createElement('ol');
+petsCardList.classList.add('pets');
+
+const petsHtml = petsList.reduce((acc, {kind, year, name}) => {
+  acc += generatePetCard(kind, year, name);
+  return acc;
+}, '');
+
+petsCardList.insertAdjacentHTML('beforeend', petsHtml);
+
+divContainer.insertAdjacentElement('beforeend', petsCardList);
+
+const btnCard = document.querySelectorAll('.btn');
+
+function onClickBtn(event) {
+  const currentBtn = event.currentTarget;
+  currentBtn.closest('.petCard').remove();
+}
+
+btnCard.forEach((button) => {
+  button.addEventListener('click', onClickBtn);
+})
